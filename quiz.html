@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take our fragrance quiz to discover your perfect candle match based on your scent preferences.">
+  <title>Fragrance Quiz — Ember & Glow</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header"><div class="header-inner">
+    <a href="index.html" class="logo"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="var(--primary)" stroke-width="2" fill="none"/><path d="M18 6C18 6 22 12 22 18C22 21.3 20.2 24 18 24C15.8 24 14 21.3 14 18C14 12 18 6 18 6Z" fill="var(--primary)"/><ellipse cx="18" cy="28" rx="6" ry="2" fill="var(--primary)" opacity="0.3"/></svg><span class="logo-text">Ember & Glow</span></a>
+    <nav class="nav" id="mainNav">
+      <div class="nav-dropdown"><a href="#">Home ▾</a><div class="nav-dropdown-menu"><a href="index.html">Home — Classic</a><a href="home2.html">Home — Premium</a></div></div>
+      <a href="collections.html">Collections</a><a href="quiz.html" class="active">Fragrance Quiz</a><a href="workshops.html">Workshops</a><a href="pricing.html">Pricing</a><a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" onclick="toggleTheme()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="icon-btn rtl-toggle" onclick="toggleRTL()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><line x1="21" y1="12" x2="3" y2="12"/></svg></button>
+      <div class="header-ctas" style="display:flex;gap:8px;margin-left:8px"><a href="quiz.html" class="btn btn-secondary btn-sm">Take Quiz</a><a href="collections.html" class="btn btn-primary btn-sm">Shop Now</a></div>
+      <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></header>
+
+  <section class="section" style="padding-top:140px;padding-bottom:80px">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:32px">
+        <span class="section-tag">Personalized for You</span>
+        <h1>Find Your Perfect Scent</h1>
+        <p>Answer a few simple questions and we'll recommend the ideal candle for your lifestyle and preferences.</p>
+      </div>
+
+      <div class="quiz-container" id="quizContainer">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar active"></div>
+          <div class="quiz-progress-bar"></div>
+          <div class="quiz-progress-bar"></div>
+          <div class="quiz-progress-bar"></div>
+          <div class="quiz-progress-bar"></div>
+        </div>
+
+        <!-- Step 1: Mood -->
+        <div class="quiz-step active" id="step1">
+          <h3>What mood are you looking to create?</h3>
+          <p>Choose the atmosphere that speaks to you most.</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuizOption(0,'relax',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🧘</div>
+              <h4>Relaxation</h4>
+              <p>Calm, peaceful, wind-down</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(0,'energize',this)">
+              <div style="font-size:2rem;margin-bottom:8px">⚡</div>
+              <h4>Energizing</h4>
+              <p>Uplifting, fresh, invigorating</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(0,'romance',this)">
+              <div style="font-size:2rem;margin-bottom:8px">💫</div>
+              <h4>Romance</h4>
+              <p>Warm, intimate, sensual</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(0,'focus',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🎯</div>
+              <h4>Focus</h4>
+              <p>Clear, sharp, meditative</p>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <div></div>
+            <button class="btn btn-primary" onclick="nextQuizStep()">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Scent Family -->
+        <div class="quiz-step" id="step2">
+          <h3>Which scent family do you gravitate toward?</h3>
+          <p>Pick the family that resonates with your natural preferences.</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuizOption(1,'floral',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🌸</div>
+              <h4>Floral</h4>
+              <p>Rose, jasmine, peony, lavender</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(1,'woody',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🌲</div>
+              <h4>Woody</h4>
+              <p>Cedar, sandalwood, pine, moss</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(1,'citrus',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🍋</div>
+              <h4>Citrus</h4>
+              <p>Lemon, bergamot, grapefruit</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(1,'fresh',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🌊</div>
+              <h4>Fresh</h4>
+              <p>Sea salt, eucalyptus, mint</p>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn btn-outline" onclick="prevQuizStep()">← Back</button>
+            <button class="btn btn-primary" onclick="nextQuizStep()">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Room -->
+        <div class="quiz-step" id="step3">
+          <h3>Where will you most use your candle?</h3>
+          <p>Different spaces call for different intensities and scents.</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuizOption(2,'bedroom',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🛏️</div>
+              <h4>Bedroom</h4>
+              <p>Soft, soothing vibes</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(2,'living',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🛋️</div>
+              <h4>Living Room</h4>
+              <p>Welcoming, warm presence</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(2,'bathroom',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🛁</div>
+              <h4>Bathroom</h4>
+              <p>Spa-like freshness</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(2,'office',this)">
+              <div style="font-size:2rem;margin-bottom:8px">💼</div>
+              <h4>Home Office</h4>
+              <p>Focused & clean</p>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn btn-outline" onclick="prevQuizStep()">← Back</button>
+            <button class="btn btn-primary" onclick="nextQuizStep()">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Intensity -->
+        <div class="quiz-step" id="step4">
+          <h3>How strong do you like your fragrances?</h3>
+          <p>This helps us match the right candle size and scent throw.</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuizOption(3,'subtle',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🌿</div>
+              <h4>Subtle</h4>
+              <p>Light, barely-there whisper</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(3,'moderate',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🕯️</div>
+              <h4>Moderate</h4>
+              <p>Balanced, noticeable presence</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(3,'strong',this)">
+              <div style="font-size:2rem;margin-bottom:8px">🔥</div>
+              <h4>Strong</h4>
+              <p>Bold, fills the whole room</p>
+            </div>
+            <div class="quiz-option" onclick="selectQuizOption(3,'intense',this)">
+              <div style="font-size:2rem;margin-bottom:8px">✨</div>
+              <h4>Luxuriously Rich</h4>
+              <p>Maximum intensity, enveloping</p>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn btn-outline" onclick="prevQuizStep()">← Back</button>
+            <button class="btn btn-primary" onclick="showQuizResult()">See My Match ✨</button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="quiz-step" id="step5">
+          <div id="quiz-result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><a href="index.html" class="logo"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="var(--primary-light)" stroke-width="2" fill="none"/><path d="M18 6C18 6 22 12 22 18C22 21.3 20.2 24 18 24C15.8 24 14 21.3 14 18C14 12 18 6 18 6Z" fill="var(--primary-light)"/></svg><span class="logo-text">Ember & Glow</span></a><p style="margin-top:16px">Handcrafted candles and home fragrances.</p></div>
+        <div class="footer-links"><h4>Quick Links</h4><a href="collections.html">Collections</a><a href="quiz.html">Fragrance Quiz</a><a href="workshops.html">Workshops</a><a href="pricing.html">Subscriptions</a></div>
+        <div class="footer-links"><h4>Support</h4><a href="#">Contact Us</a><a href="#">Shipping</a><a href="#">FAQ</a><a href="#">Care Guide</a></div>
+        <div><h4>Newsletter</h4><p>Join for 10% off.</p><form class="newsletter-form" onsubmit="event.preventDefault();showToast('Subscribed!')"><input type="email" placeholder="Email" required><button class="btn btn-primary btn-sm" type="submit">→</button></form></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Ember & Glow.</span><span>Crafted with ♥</span></div>
+    </div>
+  </footer>
+  <button class="back-to-top" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

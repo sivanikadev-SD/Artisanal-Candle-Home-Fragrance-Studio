@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join our candle-making workshops. Learn the art of hand-poured candles from expert artisans.">
+  <title>Workshops — Ember & Glow</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .workshops-hero{padding:120px 0 48px;background:var(--bg-alt);text-align:center}
+    .workshop-grid{display:flex;flex-direction:column;gap:20px}
+    .workshop-types{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+    .type-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition)}
+    .type-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px var(--shadow-md)}
+    .type-card-img{height:200px;overflow:hidden}
+    .type-card-img img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition-slow)}
+    .type-card:hover .type-card-img img{transform:scale(1.05)}
+    .type-card-body{padding:24px}
+    .type-card-body h3{margin-bottom:8px;font-size:1.15rem}
+    .type-card-body p{font-size:0.9rem;margin-bottom:16px}
+    .type-card-meta{display:flex;gap:16px;font-size:0.8rem;color:var(--text-lighter);margin-bottom:16px}
+    .type-card-meta span{display:flex;align-items:center;gap:4px}
+    .type-card-meta svg{width:14px;height:14px}
+    .calendar-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:40px}
+    .calendar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+    @media(max-width:1024px){.workshop-types{grid-template-columns:repeat(2,1fr)}.calendar-section{padding:28px}.workshops-hero{padding:100px 0 36px}}
+    @media(max-width:768px){.workshop-types{grid-template-columns:1fr}.calendar-section{padding:20px 16px}.workshops-hero{padding:90px 0 32px}.calendar-header{flex-direction:column;gap:12px;text-align:center}.type-card-body{padding:20px}.type-card-img{height:180px}.type-card-meta{flex-wrap:wrap;gap:8px}}
+    @media(max-width:480px){.workshops-hero{padding:80px 0 24px}.type-card-body{padding:16px}.type-card-body h3{font-size:1rem}.type-card-body p{font-size:0.85rem}.type-card-img{height:160px}.calendar-section{padding:16px 12px}}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="header-inner">
+    <a href="index.html" class="logo"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="var(--primary)" stroke-width="2" fill="none"/><path d="M18 6C18 6 22 12 22 18C22 21.3 20.2 24 18 24C15.8 24 14 21.3 14 18C14 12 18 6 18 6Z" fill="var(--primary)"/><ellipse cx="18" cy="28" rx="6" ry="2" fill="var(--primary)" opacity="0.3"/></svg><span class="logo-text">Ember & Glow</span></a>
+    <nav class="nav" id="mainNav">
+      <div class="nav-dropdown"><a href="#">Home ▾</a><div class="nav-dropdown-menu"><a href="index.html">Home — Classic</a><a href="home2.html">Home — Premium</a></div></div>
+      <a href="collections.html">Collections</a><a href="quiz.html">Fragrance Quiz</a><a href="workshops.html" class="active">Workshops</a><a href="pricing.html">Pricing</a><a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" onclick="toggleTheme()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="icon-btn rtl-toggle" onclick="toggleRTL()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><line x1="21" y1="12" x2="3" y2="12"/></svg></button>
+      <div class="header-ctas" style="display:flex;gap:8px;margin-left:8px"><a href="quiz.html" class="btn btn-secondary btn-sm">Take Quiz</a><a href="collections.html" class="btn btn-primary btn-sm">Shop Now</a></div>
+      <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></header>
+
+  <section class="workshops-hero">
+    <div class="container">
+      <span class="section-tag">Learn & Create</span>
+      <h1>Candle Making Workshops</h1>
+      <p>Immerse yourself in the art of candle making. Join our expert-led workshops and leave with your own hand-poured creation.</p>
+    </div>
+  </section>
+
+  <!-- Workshop Types -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Workshop Types</span>
+        <h2>Choose Your Experience</h2>
+      </div>
+      <div class="workshop-types animate-on-scroll">
+        <div class="type-card">
+          <div class="type-card-img"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=300&fit=crop&q=80" alt="Beginner Workshop"></div>
+          <div class="type-card-body">
+            <h3>Beginner's Journey</h3>
+            <p>Perfect for first-timers. Learn the basics of candle making, from wax selection to your first pour.</p>
+            <div class="type-card-meta">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 Hours</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 8 spots</span>
+              <span>$65</span>
+            </div>
+            <a href="#schedule" class="btn btn-primary btn-sm" style="width:100%">Book Now</a>
+          </div>
+        </div>
+        <div class="type-card">
+          <div class="type-card-img"><img src="https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=500&h=300&fit=crop&q=80" alt="Advanced Workshop"></div>
+          <div class="type-card-body">
+            <h3>Advanced Techniques</h3>
+            <p>Explore complex blending, layered scents, and specialty wax techniques for experienced makers.</p>
+            <div class="type-card-meta">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 Hours</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 6 spots</span>
+              <span>$95</span>
+            </div>
+            <a href="#schedule" class="btn btn-primary btn-sm" style="width:100%">Book Now</a>
+          </div>
+        </div>
+        <div class="type-card">
+          <div class="type-card-img"><img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=500&h=300&fit=crop&q=80" alt="Private Workshop"></div>
+          <div class="type-card-body">
+            <h3>Private Experience</h3>
+            <p>Exclusive sessions for groups, date nights, or corporate team building with custom scents.</p>
+            <div class="type-card-meta">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2.5 Hours</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Private</span>
+              <span>$150</span>
+            </div>
+            <a href="#schedule" class="btn btn-primary btn-sm" style="width:100%">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Schedule -->
+      <div id="schedule" class="calendar-section animate-on-scroll">
+        <div class="calendar-header">
+          <h2>Upcoming Sessions</h2>
+          <span class="section-tag" style="margin:0">April 2026</span>
+        </div>
+        <div class="workshop-grid">
+          <div class="workshop-card">
+            <div class="workshop-date"><span class="day">05</span><span class="month">Apr</span></div>
+            <div class="workshop-info">
+              <h4>Beginner's Journey — Morning</h4>
+              <p>Learn the fundamentals of soy candle making. All materials included.</p>
+              <div class="workshop-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10:00 AM – 12:00 PM</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 3 spots left</span>
+                <span style="color:var(--primary);font-weight:600">$65</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;padding:0 20px"><a href="signup.html" class="btn btn-primary btn-sm">Book</a></div>
+          </div>
+          <div class="workshop-card">
+            <div class="workshop-date"><span class="day">12</span><span class="month">Apr</span></div>
+            <div class="workshop-info">
+              <h4>Advanced Techniques — Layered Scents</h4>
+              <p>Master multi-layered fragrance blending and advanced pouring techniques.</p>
+              <div class="workshop-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2:00 PM – 5:00 PM</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 4 spots left</span>
+                <span style="color:var(--primary);font-weight:600">$95</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;padding:0 20px"><a href="signup.html" class="btn btn-primary btn-sm">Book</a></div>
+          </div>
+          <div class="workshop-card">
+            <div class="workshop-date"><span class="day">19</span><span class="month">Apr</span></div>
+            <div class="workshop-info">
+              <h4>Beginner's Journey — Evening</h4>
+              <p>A relaxing evening session with complimentary refreshments.</p>
+              <div class="workshop-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6:00 PM – 8:00 PM</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 6 spots left</span>
+                <span style="color:var(--primary);font-weight:600">$65</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;padding:0 20px"><a href="signup.html" class="btn btn-primary btn-sm">Book</a></div>
+          </div>
+          <div class="workshop-card">
+            <div class="workshop-date"><span class="day">26</span><span class="month">Apr</span></div>
+            <div class="workshop-info">
+              <h4>Weekend Special — Couples Workshop</h4>
+              <p>Create matching candles with your partner. Includes wine and light snacks.</p>
+              <div class="workshop-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3:00 PM – 5:30 PM</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2 spots left</span>
+                <span style="color:var(--primary);font-weight:600">$120 / couple</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;padding:0 20px"><a href="signup.html" class="btn btn-primary btn-sm">Book</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><a href="index.html" class="logo"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="var(--primary-light)" stroke-width="2" fill="none"/><path d="M18 6C18 6 22 12 22 18C22 21.3 20.2 24 18 24C15.8 24 14 21.3 14 18C14 12 18 6 18 6Z" fill="var(--primary-light)"/></svg><span class="logo-text">Ember & Glow</span></a><p style="margin-top:16px">Handcrafted candles and home fragrances.</p></div>
+        <div class="footer-links"><h4>Quick Links</h4><a href="collections.html">Collections</a><a href="quiz.html">Fragrance Quiz</a><a href="workshops.html">Workshops</a><a href="pricing.html">Subscriptions</a></div>
+        <div class="footer-links"><h4>Support</h4><a href="#">Contact Us</a><a href="#">Shipping</a><a href="#">FAQ</a><a href="#">Care Guide</a></div>
+        <div><h4>Newsletter</h4><p>Join for 10% off.</p><form class="newsletter-form" onsubmit="event.preventDefault();showToast('Subscribed!')"><input type="email" placeholder="Email" required><button class="btn btn-primary btn-sm" type="submit">→</button></form></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Ember & Glow.</span><span>Crafted with ♥</span></div>
+    </div>
+  </footer>
+  <button class="back-to-top" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <script src="js/main.js"></script>
+</body>
+</html>
