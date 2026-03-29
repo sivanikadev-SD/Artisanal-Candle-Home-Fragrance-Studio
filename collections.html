@@ -14,8 +14,9 @@
     .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
     .subscription-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:var(--radius-full);background:rgba(76,175,80,0.1);color:var(--success);font-size:0.75rem;font-weight:600;margin-top:8px}
     .subscription-badge svg{width:14px;height:14px}
-    @media(max-width:1024px){.product-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:480px){.product-grid{grid-template-columns:1fr}}
+    @media(max-width:1024px){.product-grid{grid-template-columns:repeat(2,1fr);gap:20px}.shop-header{padding:100px 0 36px}}
+    @media(max-width:768px){.shop-header{padding:90px 0 28px}.filters{gap:6px;margin-top:16px}.filter-btn{padding:6px 16px;font-size:0.8rem}.product-grid{gap:16px}}
+    @media(max-width:480px){.product-grid{grid-template-columns:1fr;gap:16px}.shop-header{padding:80px 0 24px}.filter-btn{padding:6px 14px;font-size:0.78rem}}
   </style>
 </head>
 <body>

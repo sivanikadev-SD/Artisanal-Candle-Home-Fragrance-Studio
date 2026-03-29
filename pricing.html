@@ -20,7 +20,9 @@
     .faq-item.open .faq-q svg{transform:rotate(180deg)}
     .faq-a{max-height:0;overflow:hidden;transition:max-height var(--transition);color:var(--text-light);font-size:0.9rem;line-height:1.7}
     .faq-item.open .faq-a{max-height:200px;padding-top:12px}
-    @media(max-width:768px){.pricing-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}}
+    @media(max-width:1024px){.pricing-grid{gap:16px}.pricing-hero{padding:100px 0 36px}}
+    @media(max-width:768px){.pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;gap:20px}.pricing-hero{padding:90px 0 28px}.pricing-toggle button{padding:8px 18px;font-size:0.85rem}.faq-q{font-size:0.9rem;gap:12px}.faq-a{font-size:0.85rem}}
+    @media(max-width:480px){.pricing-hero{padding:80px 0 24px}.pricing-toggle{width:100%;display:flex}.pricing-toggle button{flex:1;padding:8px 12px;font-size:0.8rem}.faq-item{padding:16px 0}}
   </style>
 </head>
 <body>

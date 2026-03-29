@@ -26,7 +26,9 @@
     .sub-icon svg{width:24px;height:24px}
     .mobile-dash-toggle{display:none;position:fixed;top:16px;left:16px;z-index:200;width:44px;height:44px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);align-items:center;justify-content:center;cursor:pointer}
     .mobile-dash-toggle svg{width:20px;height:20px}
-    @media(max-width:768px){.mobile-dash-toggle{display:flex}.dash-welcome{flex-direction:column;gap:16px;text-align:center}.orders-table{display:block;overflow-x:auto}}
+    @media(max-width:1024px){.mobile-dash-toggle{display:flex}.sub-card{flex-direction:column;gap:16px;align-items:stretch}.sub-card>div:last-child{display:flex;gap:8px}}
+    @media(max-width:768px){.dash-welcome{flex-direction:column;gap:16px;text-align:center;padding:24px}.dash-welcome h2{font-size:1.3rem}.orders-table{display:block;overflow-x:auto}.sub-info{flex-direction:column;text-align:center}.sub-icon{margin:0 auto}}
+    @media(max-width:480px){.dash-welcome{padding:20px}.dash-welcome p{font-size:0.85rem}.orders-table th,.orders-table td{padding:10px 12px;font-size:0.8rem;white-space:nowrap}.sub-card{padding:16px}}
     [dir="rtl"] .orders-table th,[dir="rtl"] .orders-table td{text-align:right}
   </style>
 </head>
