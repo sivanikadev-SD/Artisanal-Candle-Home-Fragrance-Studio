@@ -20,30 +20,48 @@
   </style>
 </head>
 <body>
-  <header class="header"><div class="header-inner">
-    <a href="index.html" class="logo">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 14C12 12.8954 12.8954 12 14 12H22C23.1046 12 24 12.8954 24 14V28C24 29.1046 23.1046 30 22 30H14C12.8954 30 12 29.1046 12 28V14Z" stroke="var(--primary)" stroke-width="2"/>
-        <path d="M10 10H26V12H10V10Z" fill="var(--primary)"/>
-        <path d="M18 4C18 4 15 6.5 15 8C15 9.65685 16.3431 11 18 11C19.6569 11 21 9.65685 21 8C21 6.5 18 4 18 4Z" fill="var(--primary)"/>
-      </svg>
-      <span class="logo-text">Ember & Glow</span>
-    </a>
-    <nav class="nav" id="mainNav">
-      <div class="nav-dropdown"><a href="#">Home ▾</a><div class="nav-dropdown-menu"><a href="index.html">Home — Classic</a><a href="home2.html">Home — Premium</a></div></div>
-      <a href="collections.html" class="active">Collections</a><a href="quiz.html">Fragrance Quiz</a><a href="workshops.html">Workshops</a><a href="pricing.html">Pricing</a><!-- <a href="dashboard.html">Dashboard</a> -->
-      <a href="login.html">Log In</a><a href="signup.html">Create Account</a><div class="nav-ctas">
+   <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 14C12 12.8954 12.8954 12 14 12H22C23.1046 12 24 12.8954 24 14V28C24 29.1046 23.1046 30 22 30H14C12.8954 30 12 29.1046 12 28V14Z" stroke="var(--primary)" stroke-width="2"/>
+          <path d="M10 10H26V12H10V10Z" fill="var(--primary)"/>
+          <path d="M18 4C18 4 15 6.5 15 8C15 9.65685 16.3431 11 18 11C19.6569 11 21 9.65685 21 8C21 6.5 18 4 18 4Z" fill="var(--primary)"/>
+        </svg>
+        <span class="logo-text">Ember & Glow</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <div class="nav-dropdown">
+          <a href="#">Home ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html">Home — Classic</a>
+            <a href="home2.html">Home — Premium</a>
+          </div>
+        </div>
+        <a href="collections.html" class="active">Collections</a><a href="quiz.html">Fragrance Quiz</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="pricing.html">Pricing</a>
+        <!-- <a href="dashboard.html">Dashboard</a> -->
+        <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+        <div class="nav-ctas">
           <button class="icon-btn theme-toggle" onclick="toggleTheme()" title="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button><button class="icon-btn rtl-toggle" onclick="toggleRTL()" title="Toggle RTL"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><line x1="21" y1="12" x2="3" y2="12"/></svg></button>
           <a href="collections.html" class="btn btn-primary btn-sm">Shop Now</a>
         </div>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn theme-toggle" onclick="toggleTheme()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <button class="icon-btn rtl-toggle" onclick="toggleRTL()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><line x1="21" y1="12" x2="3" y2="12"/></svg></button>
-      <div class="header-ctas" style="display:flex;gap:8px;margin-left:8px"><a href="collections.html" class="btn btn-primary btn-sm">Shop Now</a></div>
-      <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" onclick="toggleTheme()" title="Toggl  e theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn rtl-toggle" onclick="toggleRTL()" title="Toggle RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 8 3 12 7 16"/><line x1="21" y1="12" x2="3" y2="12"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
-  </div></header>
+  </header>
 
   <section class="shop-header">
     <div class="container">
