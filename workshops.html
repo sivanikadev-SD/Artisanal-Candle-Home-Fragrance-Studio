@@ -10,15 +10,16 @@
     .workshops-hero{padding:120px 0 48px;background:var(--bg-alt);text-align:center}
     .workshop-grid{display:flex;flex-direction:column;gap:20px}
     .workshop-types{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
-    .type-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition)}
+    .type-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition);display:flex;flex-direction:column;height:100%}
     .type-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px var(--shadow-md)}
     .type-card-img{height:200px;overflow:hidden}
     .type-card-img img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition-slow)}
     .type-card:hover .type-card-img img{transform:scale(1.05)}
-    .type-card-body{padding:24px}
+    .type-card-body{padding:24px;display:flex;flex-direction:column;flex-grow:1}
     .type-card-body h3{margin-bottom:8px;font-size:1.15rem}
-    .type-card-body p{font-size:0.9rem;margin-bottom:16px}
-    .type-card-meta{display:flex;gap:16px;font-size:0.8rem;color:var(--text-lighter);margin-bottom:16px}
+    .type-card-body p{font-size:0.9rem;margin-bottom:16px;flex-grow:1}
+    .type-card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;gap:12px;flex-wrap:wrap}
+    .type-card-meta{display:flex;gap:12px;font-size:0.8rem;color:var(--text-lighter);margin:0}
     .type-card-meta span{display:flex;align-items:center;gap:4px}
     .type-card-meta svg{width:14px;height:14px}
     .calendar-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:40px}
@@ -95,12 +96,14 @@
           <div class="type-card-body">
             <h3>Beginner's Journey</h3>
             <p>Perfect for first-timers. Learn the basics of candle making, from wax selection to your first pour.</p>
-            <div class="type-card-meta">
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 Hours</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 8 spots</span>
-              <span>$65</span>
+            <div class="type-card-footer">
+              <div class="type-card-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 Hours</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 8 spots</span>
+                <span>$65</span>
+              </div>
+              <a href="#schedule" class="btn btn-primary btn-sm">Book Now</a>
             </div>
-            <a href="#schedule" class="btn btn-primary btn-sm" style="width:100%">Book Now</a>
           </div>
         </div>
         <div class="type-card">
@@ -108,12 +111,14 @@
           <div class="type-card-body">
             <h3>Advanced Techniques</h3>
             <p>Explore complex blending, layered scents, and specialty wax techniques for experienced makers.</p>
-            <div class="type-card-meta">
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 Hours</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 6 spots</span>
-              <span>$95</span>
+            <div class="type-card-footer">
+              <div class="type-card-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 Hours</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 6 spots</span>
+                <span>$95</span>
+              </div>
+              <a href="#schedule" class="btn btn-primary btn-sm">Book Now</a>
             </div>
-            <a href="#schedule" class="btn btn-primary btn-sm" style="width:100%">Book Now</a>
           </div>
         </div>
         <div class="type-card">
@@ -121,12 +126,14 @@
           <div class="type-card-body">
             <h3>Private Experience</h3>
             <p>Exclusive sessions for groups, date nights, or corporate team building with custom scents.</p>
-            <div class="type-card-meta">
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2.5 Hours</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Private</span>
-              <span>$150</span>
+            <div class="type-card-footer">
+              <div class="type-card-meta">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2.5 Hours</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Private</span>
+                <span>$150</span>
+              </div>
+              <a href="#schedule" class="btn btn-primary btn-sm">Inquire</a>
             </div>
-            <a href="#schedule" class="btn btn-primary btn-sm" style="width:100%">Inquire</a>
           </div>
         </div>
       </div>
