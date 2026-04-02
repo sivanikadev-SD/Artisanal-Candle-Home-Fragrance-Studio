@@ -124,6 +124,7 @@ p { color: var(--text-light); line-height: 1.7; }
 .btn-sm { padding: 8px 20px; font-size: 0.85rem; }
 .btn-lg { padding: 16px 36px; font-size: 1.05rem; }
 
+
 /* ========== HEADER ========== */
 .header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -144,11 +145,11 @@ p { color: var(--text-light); line-height: 1.7; }
 .nav .rtl-toggle { margin-inline-start: auto; }
 .nav-links { display: flex; align-items: center; gap: 4px; }
 .nav-auth { display: flex; align-items: center; gap: 12px; }
-.nav a {
+.nav a:not(.btn) {
   padding: 8px 14px; font-size: 0.9rem; font-weight: 500; color: var(--text-light);
   border-radius: var(--radius); transition: all var(--transition); position: relative;
 }
-.nav a:hover, .nav a.active { color: var(--primary); }
+.nav a:not(.btn):hover, .nav a:not(.btn).active { color: var(--primary); }
 .nav a.active::after {
   content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
   width: 20px; height: 2px; background: var(--primary); border-radius: 2px;
