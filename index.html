@@ -6,6 +6,7 @@
   <meta name="description" content="Artisanal hand-poured candles and home fragrances. Discover our curated collections, take our fragrance quiz, and join our candle-making workshops.">
   <title>Ember & Glow — Artisanal Candle & Home Fragrance Studio</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F56F;</text></svg>" type="image/svg+xml">
 </head>
 <body>
   <!-- HEADER -->
@@ -28,10 +29,12 @@
               <a href="home2.html">Home — Premium</a>
             </div>
           </div>
+          <a href="about.html">About</a>
           <a href="collections.html">Collections</a>
           <a href="quiz.html">Fragrance Quiz</a>
           <a href="workshops.html">Workshops</a>
-          <a href="pricing.html">Pricing</a>
+          <a href="pricing.html">Subscriptions</a>
+          <a href="contact.html">Contact</a>
         </div>
 
         <button class="icon-btn rtl-toggle" onclick="toggleRTL()" title="Toggle RTL">
@@ -241,13 +244,30 @@
     </div>
   </section>
 
+  <!-- INSTAGRAM GALLERY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll" style="margin-bottom: 24px;">
+        <span class="section-tag">Follow Us</span>
+        <h2>@EmberAndGlow</h2>
+        <p>Join our community for daily inspiration and exclusive drops.</p>
+      </div>
+      <div class="gallery-grid animate-on-scroll">
+        <img src="assest/filip-baotic-SqeDlAL2vjk-unsplash.jpg" alt="Candle warm glow">
+        <img src="assest/galina-bogdanova-TDYS1JOtNA0-unsplash.jpg" alt="Botanical ingredients">
+        <img src="assest/jaclyn-moy-BLZqzDZ02lI-unsplash.jpg" alt="Luxury candle">
+        <img src="assest/kamilla-isalieva-Cj7QCBdAKk8-unsplash.jpg" alt="Old books and candles">
+      </div>
+    </div>
+  </section>
+
   <!-- NEWSLETTER -->
   <section class="section" style="background:var(--bg-alt)">
     <div class="container">
       <div class="text-center animate-on-scroll" style="max-width:560px;margin:0 auto">
         <span class="section-tag">Stay Connected</span>
         <h2>Join Our Mailing List</h2>
-        <p style="margin-bottom:24px">Get 10% off your first order and be the first to know about new collections and exclusive events.</p>
+        <p style="margin-bottom:24px;">Get 10% off your first order and be the first to know about new collections and exclusive events.</p>
         <form style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap" onsubmit="event.preventDefault();showToast('Thank you for subscribing!')">
           <input type="email" class="form-control" placeholder="Enter your email" required style="max-width:320px">
           <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -269,7 +289,7 @@
             </svg>
             <span class="logo-text">Ember & Glow</span>
           </a>
-          <p style="margin-top:16px">Handcrafted candles and home fragrances made with love, intention, and the finest natural ingredients.</p>
+          <p style="margin-top:16px; color:var(--primary-light)">Handcrafted candles and home fragrances made with love, intention, and the finest natural ingredients.</p>
           <div class="footer-social">
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -278,15 +298,22 @@
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
-          <a href="collections.html">Collections</a><a href="quiz.html">Fragrance Quiz</a><a href="workshops.html">Workshops</a><a href="pricing.html">Subscriptions</a>
+          <a href="about.html">About</a>
+          <a href="collections.html">Collections</a>
+          <a href="quiz.html">Fragrance Quiz</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="pricing.html">Subscriptions</a>
         </div>
         <div class="footer-links">
           <h4>Support</h4>
-          <a href="#">Contact Us</a><a href="#">Shipping & Returns</a><a href="#">FAQ</a><a href="#">Care Guide</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">FAQ</a>
+          <a href="#">Care Guide</a>
         </div>
         <div>
           <h4>Newsletter</h4>
-          <p>Join for 10% off your first order.</p>
+          <p style="color:var(--primary-light)">Join for 10% off your first order.</p>
           <form class="newsletter-form" onsubmit="event.preventDefault();showToast('Subscribed!')">
             <input type="email" placeholder="Your email" required>
             <button class="btn btn-primary btn-sm" type="submit">→</button>

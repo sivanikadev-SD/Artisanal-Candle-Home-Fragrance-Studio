@@ -181,6 +181,24 @@ function toggleSidebar() {
   if (sidebar) sidebar.classList.toggle('open');
 }
 
+// ========== DROPDOWNS ==========
+function initDropdowns() {
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1150) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+        const menu = dropdown.querySelector('.nav-dropdown-menu');
+        if (menu) {
+          menu.style.display = dropdown.classList.contains('active') ? 'block' : 'none';
+        }
+      }
+    });
+  });
+}
+
 // ========== NAV DROPDOWN CLOSE ON LINK CLICK ==========
 function initNavLinks() {
   document.querySelectorAll('.nav a').forEach(link => {
@@ -196,6 +214,18 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// ========== HERO CAROUSEL ==========
+function initHeroCarousel() {
+  const images = document.querySelectorAll('.hero-premium-img img');
+  if (images.length <= 1) return;
+  let currentIdx = 0;
+  setInterval(() => {
+    images[currentIdx].classList.remove('active');
+    currentIdx = (currentIdx + 1) % images.length;
+    images[currentIdx].classList.add('active');
+  }, 4000);
+}
+
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -206,4 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuiz();
   updateCartCount();
   initNavLinks();
+  initDropdowns();
+  initHeroCarousel();
 });

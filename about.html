@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Ember & Glow - our history, our process, and our commitment to artisanal craftsmanship.">
+  <title>About Us — Ember & Glow</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>" type="image/svg+xml">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 14C12 12.8954 12.8954 12 14 12H22C23.1046 12 24 12.8954 24 14V28C24 29.1046 23.1046 30 22 30H14C12.8954 30 12 29.1046 12 28V14Z" stroke="var(--primary)" stroke-width="2"/>
+          <path d="M10 10H26V12H10V10Z" fill="var(--primary)"/>
+          <path d="M18 4C18 4 15 6.5 15 8C15 9.65685 16.3431 11 18 11C19.6569 11 21 9.65685 21 8C21 6.5 18 4 18 4Z" fill="var(--primary)"/>
+        </svg>
+        <span class="logo-text">Ember & Glow</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <div class="nav-links">
+          <div class="nav-dropdown">
+            <a href="#">Home ▾</a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html">Home — Classic</a>
+              <a href="home2.html">Home — Premium</a>
+            </div>
+          </div>
+          <a href="about.html" class="active">About</a>
+          <a href="collections.html">Collections</a>
+          <a href="quiz.html">Fragrance Quiz</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="pricing.html">Subscriptions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <button class="icon-btn rtl-toggle" onclick="toggleRTL()" title="Toggle RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 8 3 12 7 16"/><line x1="21" y1="12" x2="3" y2="12"/></svg>
+        </button>
+        <button class="icon-btn theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-with-bg">
+    <div class="hero-with-bg-img">
+      <img src="assest/olga-serjantu-v8EYM-SERfc-unsplash.jpg" alt="Artisan workspace">
+    </div>
+    <div class="hero-with-bg-overlay"></div>
+    <div class="container animate-on-scroll">
+      <span class="section-tag">Our Story</span>
+      <h1>Crafting Moments of Light</h1>
+      <p>A journey from raw wax to refined fragrance, built on passion and artisanal excellence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:64px">
+        <div class="animate-on-scroll">
+          <span class="section-tag">Since 2018</span>
+          <h2>The Heart of Ember & Glow</h2>
+          <p>Founded with a simple mission: to create home fragrances that are as honest and natural as the ingredients we use. What started as a small kitchen experiment has grown into a dedicated artisanal studio.</p>
+          <p>We believe that a candle is more than just a source of light—it's an invitation to pause, breathe, and reconnect. Every scent in our collection is inspired by real-world memories, from damp pine forests to the quiet warmth of a sun-filled morning.</p>
+          <div style="display:flex;gap:32px;margin-top:24px">
+            <div><h3 style="color:var(--primary)">100%</h3><p style="font-size:0.85rem">Soy Wax</p></div>
+            <div><h3 style="color:var(--primary)">Pure</h3><p style="font-size:0.85rem">Essential Oils</p></div>
+            <div><h3 style="color:var(--primary)">Small</h3><p style="font-size:0.85rem">Batch Production</p></div>
+          </div>
+        </div>
+        <div class="animate-on-scroll">
+          <img src="assest/no-revisions-CU8ujrbkvCM-unsplash.jpg" alt="Our Studio" style="border-radius:var(--radius-xl);width:100%;height:500px;object-fit:cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Our Values</span>
+        <h2>Guided by Intention</h2>
+        <p>Beyond our products, we are committed to practices that respect our customers and the planet.</p>
+      </div>
+      <div class="grid-3 animate-on-scroll">
+        <div class="feature-card">
+          <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Sustainability First</h4>
+          <p>From recyclable glass vessels to plastic-free packaging, we minimize our footprint at every step.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3z"/></svg></div>
+          <h4>Uncompromising Quality</h4>
+          <p>If it doesn't meet our strict standards for scent throw and burn time, it never leaves our studio.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>Artisan Crafted</h4>
+          <p>No machines, no shortcuts. Every candle is poured by hand, one by one, with meticulous care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Our Artisans</span>
+        <h2>Meet the Makers</h2>
+        <p>The hands and hearts behind every Ember & Glow candle.</p>
+      </div>
+      <div class="grid-3 animate-on-scroll">
+        <div class="card">
+          <div class="card-img" style="height: 350px;">
+            <img src="assest/yomex-owo-JkyhF89gNck-unsplash.jpg" alt="Elena">
+          </div>
+          <div class="card-body" style="text-align:center;">
+            <h3>Elena Rostova</h3>
+            <p style="color:var(--primary);font-weight:600;margin-top:4px;">Master Perfumer</p>
+            <p style="margin-top:12px;">With 15 years in bespoke fragrance, Elena curates our signature scent profiles.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img" style="height: 350px;">
+            <img src="assest/carl-elmer-QXe3oX9orS0-unsplash.jpg" alt="Marcus">
+          </div>
+          <div class="card-body" style="text-align:center;">
+            <h3>Marcus Thorne</h3>
+            <p style="color:var(--primary);font-weight:600;margin-top:4px;">Lead Chandler</p>
+            <p style="margin-top:12px;">Marcus ensures perfect pour temperatures and wax consistency for every batch.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img" style="height: 350px;">
+            <img src="assest/pmv-chamara-KLU0scqbKQ0-unsplash.jpg" alt="Sarah">
+          </div>
+          <div class="card-body" style="text-align:center;">
+            <h3>Sarah Jenkins</h3>
+            <p style="color:var(--primary);font-weight:600;margin-top:4px;">Studio Manager</p>
+            <p style="margin-top:12px;">Sarah oversees sustainability sourcing and the daily rhythm of our studio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--secondary);color:#fff;text-align:center;">
+    <div class="container animate-on-scroll">
+      <span class="section-tag" style="color:var(--primary-light)">Community</span>
+      <h2 style="color:#fff;">What They're Saying</h2>
+      <div style="max-width:600px;margin:32px auto 0;">
+        <p style="font-size:1.2rem;font-style:italic;margin-bottom:24px;">"The attention to detail is remarkable. Not only are the scents beautiful and complex, but the burn is incredibly clean and long-lasting. Ember & Glow has truly elevated the atmosphere in my home."</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;">
+           <div><h4 style="margin:0;font-size:1rem;">Chloe Adams</h4><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Interior Designer</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 14C12 12.8954 12.8954 12 14 12H22C23.1046 12 24 12.8954 24 14V28C24 29.1046 23.1046 30 22 30H14C12.8954 30 12 29.1046 12 28V14Z" stroke="var(--primary-light)" stroke-width="2"/>
+              <path d="M10 10H26V12H10V10Z" fill="var(--primary-light)"/>
+              <path d="M18 4C18 4 15 6.5 15 8C15 9.65685 16.3431 11 18 11C19.6569 11 21 9.65685 21 8C21 6.5 18 4 18 4Z" fill="var(--primary-light)"/>
+            </svg>
+            <span class="logo-text">Ember & Glow</span>
+          </a>
+          <p style="margin-top:16px; color:var(--primary-light)">Handcrafted candles and home fragrances made with love, intention, and the finest natural ingredients.</p>
+          <div class="footer-social">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="about.html">About</a>
+          <a href="collections.html">Collections</a>
+          <a href="quiz.html">Fragrance Quiz</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="pricing.html">Subscriptions</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">FAQ</a>
+          <a href="#">Care Guide</a>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p style="color:var(--primary-light)">Join for 10% off your first order.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();showToast('Subscribed!')">
+            <input type="email" placeholder="Your email" required>
+            <button class="btn btn-primary btn-sm" type="submit">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ember & Glow. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

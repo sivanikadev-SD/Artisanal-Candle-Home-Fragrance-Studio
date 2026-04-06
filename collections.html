@@ -18,6 +18,7 @@
     @media(max-width:768px){.shop-header{padding:90px 0 28px}.filters{gap:6px;margin-top:16px}.filter-btn{padding:6px 16px;font-size:0.8rem}.product-grid{gap:16px}}
     @media(max-width:480px){.product-grid{grid-template-columns:1fr;gap:16px}.shop-header{padding:80px 0 24px}.filter-btn{padding:6px 14px;font-size:0.78rem}}
   </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F56F;</text></svg>" type="image/svg+xml">
 </head>
 <body>
    <header class="header" id="header">
@@ -39,10 +40,12 @@
               <a href="home2.html">Home — Premium</a>
             </div>
           </div>
+          <a href="about.html">About</a>
           <a href="collections.html" class="active">Collections</a>
           <a href="quiz.html">Fragrance Quiz</a>
           <a href="workshops.html">Workshops</a>
-          <a href="pricing.html">Pricing</a>
+          <a href="pricing.html">Subscriptions</a>
+          <a href="contact.html">Contact</a>
         </div>
 
         <button class="icon-btn rtl-toggle" onclick="toggleRTL()" title="Toggle RTL">
@@ -65,7 +68,11 @@
     </div>
   </header>
 
-  <section class="shop-header">
+  <section class="hero-with-bg">
+    <div class="hero-with-bg-img">
+      <img src="assest/declan-sun-UZT7ZPxbPMM-unsplash.jpg" alt="Collections background">
+    </div>
+    <div class="hero-with-bg-overlay"></div>
     <div class="container">
       <span class="section-tag">Shop</span>
       <h1>Our Collections</h1>
@@ -174,6 +181,82 @@
     </div>
   </section>
 
+  <section class="section" style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Find Your True Match</span>
+        <h2>Scent Families Explained</h2>
+        <p>Understanding our core fragrance profiles to help you find the perfect aroma.</p>
+      </div>
+      <div class="grid-3 animate-on-scroll">
+        <div class="feature-card" style="background:var(--surface);">
+          <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c1 3 2 6 2 9a6 6 0 1 1-12 0c0-3 1-6 2-9z"/></svg></div>
+          <h4>Floral & Botanical</h4>
+          <p>Soft, romantic, and delicate. Features notes of jasmine, rose, and lavender to create a serene environment.</p>
+        </div>
+        <div class="feature-card" style="background:var(--surface);">
+          <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h4>Woody & Earthy</h4>
+          <p>Grounding and warming. Discover deep notes of cedarwood, amber, sandalwood, and fresh pine.</p>
+        </div>
+        <div class="feature-card" style="background:var(--surface);">
+          <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <h4>Citrus & Fresh</h4>
+          <p>Energizing and uplifting. Bursts of bergamot, lemon verbena, and coastal sea salt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:64px">
+        <div class="animate-on-scroll">
+          <img src="assest/galina-bogdanova-TDYS1JOtNA0-unsplash.jpg" alt="Candle Care" style="border-radius:var(--radius-xl);width:100%;height:450px;object-fit:cover">
+        </div>
+        <div class="animate-on-scroll">
+          <span class="section-tag">Candle Care</span>
+          <h2>How to Maximize Your Burn Time</h2>
+          <ul style="margin: 24px 0; padding-left: 20px; display:flex; flex-direction:column; gap:16px;">
+            <li><strong>The First Burn:</strong> Let the wax pool reach the edges of the jar to prevent tunneling.</li>
+            <li><strong>Trim the Wick:</strong> Always trim your wick to 1/4 inch before each lighting for a clean, smoke-free burn.</li>
+            <li><strong>Timing is Everything:</strong> Avoid burning your candle for more than 4 hours at a time to preserve the fragrance oils.</li>
+          </ul>
+          <a href="about.html" class="btn btn-outline" style="margin-top:16px">Read Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--secondary);color:#fff">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag" style="color:var(--primary-light)">Loved by You</span>
+        <h2 style="color:#fff">What They're Saying</h2>
+      </div>
+      <div class="grid-3 animate-on-scroll">
+        <div class="testimonial-card" style="background:transparent;border-color:rgba(255,255,255,0.2)">
+          <p style="color:rgba(255,255,255,0.9)">"I purchased the Discovery Set and fell in love with every single one. Cedar & Sage is my absolute favorite for reading on rainy afternoons."</p>
+          <div class="testimonial-author">
+            <h4 style="color:#fff;margin:0;padding-left:0">Emily R.</h4>
+          </div>
+        </div>
+        <div class="testimonial-card" style="background:transparent;border-color:rgba(255,255,255,0.2)">
+          <p style="color:rgba(255,255,255,0.9)">"Finally, candles that don't give me a headache! The essential oils are pure, and the scent fills the entire living room."</p>
+          <div class="testimonial-author">
+            <h4 style="color:#fff;margin:0;padding-left:0">Michael T.</h4>
+          </div>
+        </div>
+        <div class="testimonial-card" style="background:transparent;border-color:rgba(255,255,255,0.2)">
+          <p style="color:rgba(255,255,255,0.9)">"Ocean Breeze transformed my bathroom into a luxury spa. These also make the most incredible gifts."</p>
+          <div class="testimonial-author">
+            <h4 style="color:#fff;margin:0;padding-left:0">Samantha W.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -187,7 +270,7 @@
             </svg>
             <span class="logo-text">Ember & Glow</span>
           </a>
-          <p style="margin-top:16px">Handcrafted candles and home fragrances made with love, intention, and the finest natural ingredients.</p>
+          <p style="margin-top:16px; color:var(--primary-light)">Handcrafted candles and home fragrances made with love, intention, and the finest natural ingredients.</p>
           <div class="footer-social">
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -196,15 +279,22 @@
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
-          <a href="collections.html">Collections</a><a href="quiz.html">Fragrance Quiz</a><a href="workshops.html">Workshops</a><a href="pricing.html">Subscriptions</a>
+          <a href="about.html">About</a>
+          <a href="collections.html">Collections</a>
+          <a href="quiz.html">Fragrance Quiz</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="pricing.html">Subscriptions</a>
         </div>
         <div class="footer-links">
           <h4>Support</h4>
-          <a href="#">Contact Us</a><a href="#">Shipping & Returns</a><a href="#">FAQ</a><a href="#">Care Guide</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">FAQ</a>
+          <a href="#">Care Guide</a>
         </div>
         <div>
           <h4>Newsletter</h4>
-          <p>Join for 10% off your first order.</p>
+          <p style="color:var(--primary-light)">Join for 10% off your first order.</p>
           <form class="newsletter-form" onsubmit="event.preventDefault();showToast('Subscribed!')">
             <input type="email" placeholder="Your email" required>
             <button class="btn btn-primary btn-sm" type="submit">→</button>
