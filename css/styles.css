@@ -757,6 +757,10 @@ p {
   margin-bottom: 80px;
 }
 
+[data-theme="dark"] .quiz-container {
+  background: #000000;
+}
+
 .quiz-progress {
   display: flex;
   gap: 8px;
@@ -1375,8 +1379,8 @@ p {
 .newsletter-form .btn-primary {
   position: absolute;
   right: 4px;
-  top: 4px;
-  bottom: 4px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 44px;
   height: 44px;
   padding: 0;
@@ -1709,6 +1713,61 @@ p {
 [dir="rtl"] .back-to-top {
   right: auto;
   left: 30px;
+}
+
+/* ========== FAQ ACCORDION ========== */
+.faq-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  transition: all var(--transition);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+  gap: 16px;
+}
+
+.faq-q svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition);
+  color: var(--text-lighter);
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-q svg {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition), padding-top var(--transition);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-a {
+  max-height: 500px;
+  padding-top: 16px;
 }
 
 /* ========== RESPONSIVE: LARGE DESKTOP (1440px+) ========== */
